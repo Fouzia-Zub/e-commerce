@@ -1,2 +1,5 @@
 export {default as Header } from './header/Header'
 export { default as Footer } from './footer/Footer'
+export { default as AdminOnlyRoute } from './adminOnlyRoute/AdminOnlyRoute'
+export { default as ProductDetail } from './product/productDetail/ProductDetail'
+export { default as ReviewProduct } from './reviewProduct/ReviewProduct'

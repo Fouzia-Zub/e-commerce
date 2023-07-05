@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { sliderData } from './slider-data'
-import "./Slider.css"
+import "./Slider.scss"
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const slideLength = sliderData.length
@@ -29,6 +29,7 @@ const Slider = () => {
     useEffect(() => {
         if(autoScroll){
             function auto() {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 slideInterval = setInterval(nextSlide, intervalTime)
             }
             auto()

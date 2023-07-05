@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import './auth.modules.css'
+import styles from './auth.module.scss'
 import ForgotImg from '../../assests/forgot.png'
 import Card from '../../components/card/Card'
 import { Link } from 'react-router-dom'
@@ -30,12 +30,12 @@ const Reset = () => {
   return (
     <>
       {isLoading && <Loader/>}
-      <section className={`"container" ${"auth"}`}>
-        <div className="img">
+      <section className={`container ${styles.auth}`}>
+        <div className={styles.img}>
           <img src={ForgotImg} alt='login' width="400"/>
         </div> 
         <Card>
-          <div className="form">
+          <div className={styles.form}>
             <h2>Login</h2>
             <form onSubmit={resetPassword}>
               <input 
@@ -44,8 +44,8 @@ const Reset = () => {
               value={email} 
               required 
               onChange={(e) => setEmail(e.target.value)} />
-              <button type='submit' className="--btn --btn-primary --btn-block">Reset Password</button>
-              <div className='links'>
+              <button type={styles.submit} className="--btn --btn-primary --btn-block">Reset Password</button>
+              <div className={styles.links}>
                 <p><Link to='/login'>- Login</Link></p>
                 <p><Link to='/register'>- Register</Link></p>
               </div>

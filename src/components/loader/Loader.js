@@ -1,10 +1,10 @@
-import './Loader.modules.css'
+import styles from './Loader.module.scss'
 import loaderImg from "../../assests/loader.gif"
 import ReactDOM from 'react-dom'
 const Loader = () => {
   return ReactDOM.createPortal (
-    <div className='wrapper'>
-        <div className='loader'>
+    <div className={styles.wrapper}>
+        <div className={styles.loader}>
             <img src={loaderImg} alt='loader..'/>
         </div>
     </div>,
