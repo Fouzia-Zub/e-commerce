@@ -93,7 +93,8 @@ const CheckoutForm = () => {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000/checkout-success",
+        // http://localhost:3000/checkout-success
+        return_url: "https://e-commerce-fouzia-zub.vercel.app/checkout-success",
       },
       redirect: "if_required" 
     })
